@@ -48,25 +48,34 @@ void setup() {
   matrix.setTextWrap(false);
   matrix.setBrightness(40);
   matrix.setTextColor(colors[0]);
+ 
 }
 
-int x    = matrix.width();
+ int x    = matrix.width();
 
 void loop() {
   matrix.fillScreen(0);
-  matrix.setCursor(x, 0);
-  matrix.print(F("<<<"));
-  if(--x < -30) {
-    x = matrix.width();
-    matrix.setTextColor(colors[2]);
-  }
   
+//  matrix.print(F("Ready  "));
+ 
+
+//  matrix.setCursor(x, 0);
+//  matrix.print(F("<<<<<<<"));
+//  if(--x < -36) {
+//    x = matrix.width();
+//    matrix.setTextColor(colors[2]);
+//  }
+//  
 //  matrix.setCursor(-x, 0);
 //  matrix.print(F(">>>"));
-//  if(--x < -30) {
+//  if(--x < -36) {
 //    x = matrix.width();
 //    matrix.setTextColor(colors[3]);
 //  }
+   
+   matrix.setCursor(4, 0);
+   matrix.print(F("STOP"));
+   matrix.setTextColor(colors[1]);
    
     matrix.show();
     delay(100);
