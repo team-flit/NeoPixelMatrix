@@ -72,12 +72,26 @@ void loop() {
 //    x = matrix.width();
 //    matrix.setTextColor(colors[3]);
 //  }
-   
-   matrix.setCursor(4, 0);
-   matrix.print(F("STOP"));
-   matrix.setTextColor(colors[1]);
-   
-    matrix.show();
-    delay(100);
 
+    textFlash("STOP", matrix.Color(255,0,0), 10);
+
+   
+//    matrix.show();
+//    delay(100);
+
+}
+
+void textFlash (String text, uint32_t c, uint16_t n) {
+  for ( int i = 0; i < n; i++ ) {
+    matrix.setCursor(4, 0);
+    matrix.setTextColor(c);
+    matrix.print(text);
+    matrix.show();
+    delay(500);
+
+    matrix.fillScreen(0);
+    matrix.show();
+//    matrix.setCursor(4, 0);
+    delay(500);
+  }
 }
