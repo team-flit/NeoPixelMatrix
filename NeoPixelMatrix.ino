@@ -55,30 +55,29 @@ void setup() {
 
 void loop() {
   matrix.fillScreen(0);
-  
-//  matrix.print(F("Ready  "));
- 
-
+ // Left
 //  matrix.setCursor(x, 0);
-//  matrix.print(F("<<<<<<<"));
-//  if(--x < -36) {
+//  matrix.print(F("<<<<<"));
+//  if(--x < -30) {
 //    x = matrix.width();
 //    matrix.setTextColor(colors[2]);
 //  }
-//  
+
+
+//Right
 //  matrix.setCursor(-x, 0);
-//  matrix.print(F(">>>"));
-//  if(--x < -36) {
+//  matrix.print(F(">>>>>"));
+//  if(--x < -30) {
 //    x = matrix.width();
 //    matrix.setTextColor(colors[3]);
 //  }
 
+    //matrix.show();
+    //delay(100);
+
+
+//Stop
     textFlash("STOP", matrix.Color(255,0,0), 10);
-
-   
-//    matrix.show();
-//    delay(100);
-
 }
 
 void textFlash (String text, uint32_t c, uint16_t n) {
@@ -91,7 +90,7 @@ void textFlash (String text, uint32_t c, uint16_t n) {
 
     matrix.fillScreen(0);
     matrix.show();
-//    matrix.setCursor(4, 0);
     delay(500);
+    
   }
 }
